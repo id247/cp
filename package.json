@@ -38,7 +38,8 @@
     "rev-hash": "^1.0.0",
     "strip-loader": "^0.1.2",
     "webpack": "latest",
-    "webpack-config": "^4.0.0"
+    "webpack-config": "^4.0.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
     "lint": "eslint src/js",

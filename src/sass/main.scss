@@ -12,5 +12,292 @@
  * main
  * ========================================================================== */
 
+.logo{
+	@include sprite($logotype);
+	text-indent: -9999px;
+	text-align: left;
+	display: inline-block;
+}
 
+/* ==========================================================================
+ * section
+ * ========================================================================== */
+
+.section{
+	
+	padding: 85px 0 85px;
+
+	&--beige{
+		background: #ececec;
+	}
+
+	&__title{
+		font-size: 27px;
+		line-height: (46/34);
+		font-weight: 700;
+		margin: 0 0 34px;
+	}
+}
+
+/* ==========================================================================
+ * header
+ * ========================================================================== */
+
+
+.header{
+	background: #fff;
+	padding: 20px 0 27px;
+
+	&__logo{
+		float: left;
+	}
+
+	&__contacts{
+		float: right;
+		margin: 22px 0 0;
+		font-size: 14px;
+	}
+}
  
+
+/* ==========================================================================
+ * home
+ * ========================================================================== */
+
+
+.home{
+	
+	&__content{
+		float: left;
+		width: 680px;
+		position: relative;
+	}
+
+	&__title{
+		font-size: 34px;
+	}
+
+	&__screen-placeholder{
+		float: right;
+		margin: -45px 0 -45px;
+		width: 250px;
+	}
+
+	&__screen{
+		display: block;
+	}
+
+	&__list{
+		
+	}
+}
+
+.home-list{
+
+	&__title{
+		font-size: 18px;
+		font-weight: 400;
+		font-style: italic;
+		margin: 0 0 20px;
+	}
+
+	&__list{
+		
+	}
+
+	&__item{
+		margin: 0 0 25px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&__subtitle{
+		font-weight: 700;
+		font-size: 18px;
+		margin: 0 0 8px;
+	}
+}
+
+
+/* ==========================================================================
+ * cp
+ * ========================================================================== */
+
+.cp{
+
+	padding: 120px 0 100px;
+
+	&__content{
+		float: right;
+		width: 465px;
+		margin: 30px 0 0;
+	}
+
+	&__title{
+		margin: 0 0 20px;
+	}
+
+	&__text{
+		margin: 0 0 23px;
+	}
+
+	&__laptop-placeholder{
+		float: left;
+		width: 485px;
+		margin: 0 0 0 -25px;
+	}
+}
+
+
+/* ==========================================================================
+ * benefits
+ * ========================================================================== */
+
+.benefits{
+	background: #fff url(../images/bg/benefits.jpg) 50% 0 no-repeat;
+	background-size: cover;
+	color: #fff;
+
+	&__title{
+		text-align: center;
+		margin: 0 0 45px;
+	}
+
+	&__list{
+		text-align: center;
+		margin: 0 0 -40px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 31%;
+		margin: 0 1% 40px;
+
+		&:before{
+			content: '';
+			display: block;
+			margin: 0 auto 14px;
+			@include sprite($mark);
+		}
+	}
+}
+
+/* ==========================================================================
+ * requirements
+ * ========================================================================== */
+
+.requirements{
+
+	&__title{
+		margin: 0 0 25px;
+	}
+
+	&__list{
+		margin: 0 0 55px;
+	}
+
+	&__item{
+		margin: 0 0 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:before{
+			content: '—';
+			margin: 0 14px 0 3px;
+		}
+	}
+
+	&__docs{
+		
+	}
+}
+
+/* ==========================================================================
+ * docs
+ * ========================================================================== */
+
+
+.docs{
+	
+	&__list{
+		margin: 0 -35px -30px 0;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 30px 30px 0;
+	}
+
+	&__href{
+		
+	}
+}
+
+.docs-href{
+	display: block;
+	padding: 1px 0 0 45px;
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&:hover{
+		.docs-href__title{
+			border-color: transparent;
+		}
+	}
+
+	&--doc:before{
+		@include sprite($doc);
+	}
+
+	&--pdf:before{
+		@include sprite($pdf);
+	}
+
+	&__title{
+		color: $blue;
+		font-size: 18px;
+		border-bottom: 1px solid;
+		display: inline-block;
+		margin: 0 0 5px;
+		transition: all .2s;
+	}
+
+	&__text{
+		display: block;
+		color: #b1b1b1;
+		font-size: 12px;
+		line-height: (16/12);
+	}
+}
+
+
+/* ==========================================================================
+ * footer
+ * ========================================================================== */
+
+.footer{
+
+	&__title{
+		text-align: center;
+		margin: 0 0 20px;
+	}
+
+	&__form{
+		width: 436px;
+		margin: 0 auto 43px;
+	}
+
+	&__text{
+		text-align: center;
+		font-size: 14px;
+	}
+}

@@ -38,6 +38,44 @@
 		}
 	}
 
+	&--blue{
+		background: $blue;
+		background: linear-gradient(to bottom, #22c5e8 0%, #1ab1e0 100%);
+		color: #fff;
+		border: 1px solid #1698b9;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		&:hover{
+			background: lighten($blue, 5%);
+			background: linear-gradient(to bottom, lighten(#22c5e8, 5%) 0%, lighten(#1ab1e0, 5%) 100%);
+		
+		}
+		&:active{
+			background: darken($blue, 5%);
+			background: linear-gradient(to bottom, darken(#22c5e8, 5%) 0%, darken(#1ab1e0, 5%) 100%);
+		
+		}
+	}
+
+	&--yellow{
+		background: #fdb918;
+		background: linear-gradient(to bottom, #fdb918 0%, #fda112 100%);
+		color: #fff;
+		border: 1px solid #fd7d12;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		&:hover{
+			background: lighten(#fdb918, 5%);
+			background: linear-gradient(to bottom, lighten(#fdb918, 5%) 0%, lighten(#fda112, 5%) 100%);
+		
+		}
+		&:active{
+			background: darken(#fdb918, 5%);
+			background: linear-gradient(to bottom, darken(#fdb918, 5%) 0%, darken(#fda112, 5%) 100%);
+		
+		}
+	}
+
 	&--m{
 		border-radius: 8px;
 		font-weight: 700;
@@ -46,10 +84,10 @@
 	}
 
 	&--l{
-		border-radius: 8px;
+		border-radius: 4px;
 		font-weight: 700;
-		font-size: 15px;
-		padding: 10px 20px 10px;
+		font-size: 16px;
+		padding: 14px 25px 15px;
 	}
 
 	&--block{
@@ -76,7 +114,7 @@
 
 	&__input-placeholder{
 		position: relative;
-		margin-bottom: 16px;
+		margin-bottom: 15px;
 
 		&--inline{
 			width: 48%;
@@ -104,31 +142,42 @@
 		//background: rgba(0, 0, 0, .7);
 	}
 
+	&__message{
+		margin: 0 0 15px; 
+		text-align: center;
+		
+	}
+
 	&__button-placeholder{
 		margin-top: 20px;
+
+		&--center{
+			text-align: center;
+		}
 	}
 
 	&__input,
 	&__textarea{
 		-webkit-appearance: none;
-		padding: 0 0 0 20px;
+		padding: 0 0 0 16px;
 		width: 100%;
 		outline: none;
-		border: 1px solid #d7d7d7;
+		border: 1px solid #cccccc;
 		max-width: 100%;
 		font-size: 15px;
 		font-family: $mainFontFamily;
 		background: #f6f5f1;
 		border-radius: 5px;
-		box-shadow: inset 0 2px 3px rgba(0,0,0,.13); 
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.1); 
 		&.error{
 			border-color: #ef6d51;
+			background: lighten(#ef6d51, 33%);
 		}
 	}
 	&__input{
-		&--h40{
-			height: 40px;
-			line-height: 40px;
+		&--l{
+			height: 52px;
+			line-height: 52px;
 		}
 	}
 	&__textarea{
