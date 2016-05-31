@@ -1,8 +1,8 @@
 {
-  "name": "project",
+  "name": "cp",
   "version": "1.0.0",
   "description": "",
-  "cdn": "https://ad.csdnevnik.ru/special/staging/folder/",
+  "cdn": "https://ad.csdnevnik.ru/special/staging/cp/",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
