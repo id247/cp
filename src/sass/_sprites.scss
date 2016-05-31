@@ -11,22 +11,55 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$doc-name: 'doc';
+$doc-x: 91px;
+$doc-y: 38px;
+$doc-offset-x: -91px;
+$doc-offset-y: -38px;
+$doc-width: 36px;
+$doc-height: 48px;
+$doc-total-width: 200px;
+$doc-total-height: 91px;
+$doc-image: '../images/sprite.png';
+$doc: (91px, 38px, -91px, -38px, 36px, 48px, 200px, 91px, '../images/sprite.png', 'doc', );
 $logotype-name: 'logotype';
-$logotype-x: 0px;
+$logotype-x: 91px;
 $logotype-y: 0px;
-$logotype-offset-x: 0px;
+$logotype-offset-x: -91px;
 $logotype-offset-y: 0px;
-$logotype-width: 148px;
-$logotype-height: 52px;
-$logotype-total-width: 148px;
-$logotype-total-height: 52px;
+$logotype-width: 109px;
+$logotype-height: 38px;
+$logotype-total-width: 200px;
+$logotype-total-height: 91px;
 $logotype-image: '../images/sprite.png';
-$logotype: (0px, 0px, 0px, 0px, 148px, 52px, 148px, 52px, '../images/sprite.png', 'logotype', );
-$spritesheet-width: 148px;
-$spritesheet-height: 52px;
+$logotype: (91px, 0px, -91px, 0px, 109px, 38px, 200px, 91px, '../images/sprite.png', 'logotype', );
+$mark-name: 'mark';
+$mark-x: 0px;
+$mark-y: 0px;
+$mark-offset-x: 0px;
+$mark-offset-y: 0px;
+$mark-width: 91px;
+$mark-height: 91px;
+$mark-total-width: 200px;
+$mark-total-height: 91px;
+$mark-image: '../images/sprite.png';
+$mark: (0px, 0px, 0px, 0px, 91px, 91px, 200px, 91px, '../images/sprite.png', 'mark', );
+$pdf-name: 'pdf';
+$pdf-x: 127px;
+$pdf-y: 38px;
+$pdf-offset-x: -127px;
+$pdf-offset-y: -38px;
+$pdf-width: 36px;
+$pdf-height: 48px;
+$pdf-total-width: 200px;
+$pdf-total-height: 91px;
+$pdf-image: '../images/sprite.png';
+$pdf: (127px, 38px, -127px, -38px, 36px, 48px, 200px, 91px, '../images/sprite.png', 'pdf', );
+$spritesheet-width: 200px;
+$spritesheet-height: 91px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($logotype, );
-$spritesheet: (148px, 52px, '../images/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($doc, $logotype, $mark, $pdf, );
+$spritesheet: (200px, 91px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

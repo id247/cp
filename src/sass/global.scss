@@ -21,6 +21,7 @@ a{
 }
 
 .link{
+	color: $blue;
 	border-bottom: 1px solid;
 	transition: all .3s;
 	&:hover{
@@ -29,6 +30,7 @@ a{
 }
 
 .inverselink{
+	color: $blue;
 	border-bottom: 1px solid transparent;
 	transition: all .3s;
 	&:hover{
@@ -65,4 +67,10 @@ sup{
 .text{
 	font-size: 16px;
 	line-height: (24/16);
+}
+
+.wrap{
+	@include clearfix;
+	width: 950px;
+	margin: 0 auto;
 }
