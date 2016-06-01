@@ -8,7 +8,7 @@ export default (function(global, window, document, undefined){
 		const forms = document.querySelectorAll('.form');
 		const messages = {
 			empty: '',
-			validationError: 'Заполните все поля!',
+			validationError: 'Все поля должны быть заполнены',
 			processSubmit: 'Отправка данных...',
 			successSubmit: 'Спасибо за оставленную заявку! <br> Мы свяжемся с вами в ближайшее время!',
 			errorSubmit: 'Произошла ошибка сервиса! <br> Попробуйте отправить еще раз или свяжитесь с нами по e-mail',

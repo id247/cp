@@ -145,7 +145,7 @@
 	&__message{
 		margin: 0 0 15px; 
 		text-align: center;
-		
+
 	}
 
 	&__button-placeholder{
@@ -187,6 +187,11 @@
 			height: 120px;
 		}
 	}
+}
+
+[name="_gotcha"],
+[name="_format"]{
+	display: none;
 }
 
 

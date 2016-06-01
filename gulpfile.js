@@ -144,6 +144,20 @@ gulp.task('vers', function(){
 				return node;
 			})
 		},
+		function relativeHrefs(tree) {
+			tree.match({ tag: 'a' }, function (node) {
+				const href = node.attrs && node.attrs['href'] ? node.attrs['href'] : false;
+				
+				//if no href or it is external
+				if (!href || href.indexOf('http') === 0 || href.indexOf('assets/') !== 0){
+					return node;
+				}
+
+				node.attrs['href'] =  href.replace('assets/', CDN);
+
+				return node;
+			})
+		},
 		function imgVers(tree) {
 			tree.match({ tag: 'img' }, function (node) {
 				return setVestion(node, 'src');
@@ -178,7 +192,7 @@ gulp.task('vers', function(){
 			return node;
 		}
 
-		node.attrs[attrName]=  CDN + attr.replace('assets/', '') + '?_v=' + version;
+		node.attrs[attrName]=  attr.replace('assets/', CDN) + '?_v=' + version;
 		return node;
 	}
 
