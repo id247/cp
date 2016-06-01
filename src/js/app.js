@@ -7,8 +7,9 @@ export default (function(global, window, document, undefined){
 	function _form(){
 		const forms = document.querySelectorAll('.form');
 		const messages = {
-			empty: '',
+			none: '',
 			validationError: 'Все поля должны быть заполнены',
+			validationEmailError: 'Введите коректный email-адрес',
 			processSubmit: 'Отправка данных...',
 			successSubmit: 'Спасибо за оставленную заявку! <br> Мы свяжемся с вами в ближайшее время!',
 			errorSubmit: 'Произошла ошибка сервиса! <br> Попробуйте отправить еще раз или свяжитесь с нами по e-mail',
@@ -20,23 +21,46 @@ export default (function(global, window, document, undefined){
 
 		function validationMessage(requiredFields, message){
 			
-			showMessage(message, 'empty');
+			let errorId = 'none';
+			let emailError = false;
 
 			requiredFields && [].forEach.call(requiredFields, (field) => {
 				if (field.classList.contains('error')){
-					showMessage(message, 'validationError');
+					errorId = 'validationError';
+				}
+				if (field.classList.contains('email-error')){
+					emailError = true;
 				}
 			});
+
+			if (errorId == 'none' && emailError){
+				errorId = 'validationEmailError';
+			}
+
+			showMessage(message, errorId);
+		}
+
+		function validateEmail(email) {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(email);
 		}
 			
 		function isFieldValid(field){
-			if (field.value.length > 0){				
-				field.classList.remove('error');				
-				return true;
-			}else{
-				field.classList.add('error');
+			field.classList.remove('error');			
+			field.classList.remove('email-error');			
+
+			if (field.value.length === 0){				
+				field.classList.add('error');				
+				return false;
 			}
-			return false;
+
+			if (field.type === 'email' && !validateEmail(field.value)){		
+			
+				field.classList.add('email-error');					
+				return false;
+			}				
+			
+			return true;
 		}
 
 		function areFieldsValid(requiredFields){
