@@ -1,14 +1,12 @@
 'use strict';
 
 import PromisePotyfill from 'promise-polyfill';
-window.Promise = PromisePotyfill;
-
 import 'whatwg-fetch';
-
-
 
 export default (function(global, window, document, undefined){
 	
+	window.Promise = PromisePotyfill;
+
 	function _form(){
 		const forms = document.querySelectorAll('.form');
 		const messages = {
