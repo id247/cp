@@ -35,6 +35,7 @@
     "gulp-util": "latest",
     "gulp-watch": "latest",
     "gulp.spritesmith": "latest",
+    "promise-polyfill": "^5.2.1",
     "rev-hash": "^1.0.0",
     "strip-loader": "^0.1.2",
     "webpack": "latest",

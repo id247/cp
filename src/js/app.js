@@ -1,6 +1,11 @@
 'use strict';
 
+import PromisePotyfill from 'promise-polyfill';
+window.Promise = PromisePotyfill;
+
 import 'whatwg-fetch';
+
+
 
 export default (function(global, window, document, undefined){
 	

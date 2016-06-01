@@ -290,8 +290,14 @@
 		<h2 class="section__title footer__title">
 			Заявка на сотрудничество
 		</h2>
-
+		
+		@@if (server === "local"){
+		<form action="https://formspree.io/bazhenov@company.dnevnik.ru" class="footer__form form" method="post" novalidate>
+		}
+		
+		@@if (server !== "local"){
 		<form action="https://formspree.io/app@company.dnevnik.ru" class="footer__form form" method="post" novalidate>
+		}
 
 			<input type="hidden" name="_subject" value="Заявка на сотрудничество c ЦП (лендинг)">
 			<input type="text" name="_gotcha" />
