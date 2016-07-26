@@ -88,7 +88,14 @@
 	}
 
 	&__list{
-		
+		margin: 0 0 30px;
+	}
+
+	&__likely{
+		background: #fff;
+		display: inline-block;
+		padding: 10px;
+		border-radius: 12px;
 	}
 }
 
@@ -299,5 +306,17 @@
 	&__text{
 		text-align: center;
 		font-size: 14px;
+		margin: 0 0 30px;
+	}
+
+	&__likely-placeholder{
+		text-align: center;
+	}
+	
+	&__likely{
+		display: inline-block;
+		padding: 10px;
+		border-radius: 12px;
+		background: #fff;
 	}
 }
